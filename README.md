@@ -1,10 +1,10 @@
-# modelo-OMYK
+# OMYKmodel
 
-Repositorio del código del modelo y figuras de la tesis:
+Repositorio del código del modelo y figuras del artículo:
 
-"Modelo dinámico para explorar el manejo del socio-ecosistema asociado al Área Natural Protegida *Otoch Ma'ax Yetel Kooh*, Península de Yucatán, México"
+***"NOMBRE"***
 
-Disponible en:
+Disponible en: ***LINK***
 
 **Contenido**
 
