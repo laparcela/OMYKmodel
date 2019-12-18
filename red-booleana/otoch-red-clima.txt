@@ -1,0 +1,7 @@
+targets, factors
+
+####### subsistema CLIMA #######
+
+temperatura, ! precipitacion
+presion, ! temperatura
+precipitacion, ! presion
