@@ -39,7 +39,9 @@ graficar <- function(tabla_datos, variable_salida, parametro, texto_y, texto_cua
     #guides(col = guide_legend(ncol = 2), fill = guide_legend(ncol = 2)) +
     labs(fill = texto_cuadro, colour = texto_cuadro) +
     scale_x_continuous(expand = c(0,0)) +
+    theme(text = element_text(size=tamano.texto), legend.key.height = unit(0.75,'line'),legend.key.width = unit(0.9,'line')) +#, family = "ArchivoNarrow")) # La presentación usa esta fuente
     #theme_classic2() +
-    theme(text = element_text(size=tamano.texto))#, family = "ArchivoNarrow")) # La presentación usa esta fuente
+    guides(fill = guide_legend(title.theme = element_text(size= tamano.texto - 2.5)) )
+
   #######################################################
 }

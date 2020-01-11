@@ -38,9 +38,9 @@ grafica <- ggplot(datos, aes(x=probQuemarse, y=totalAreaQuemada)) +
   #ylab("Área quemada (ha)") +
   ylab("Burned area (ha)") +
   #xlab("Probabilidad de cuadro de quemarse") +
-  xlab("Probability of burning") +
-  theme(plot.subtitle = element_text(size = 8), axis.text.x = element_text(size = 9, angle = 90, vjust = 0.5)) +
-  theme(text = element_text(size = 14)) +
+  xlab("Patch burning probability") +
+  theme(plot.subtitle = element_text(size = 9), axis.text.x = element_text(size = 8, angle = 90, vjust = 0.5)) +
+  theme(text = element_text(size = 12)) +
   theme(panel.grid.minor = element_blank()) +
   #geom_text(data = texto, mapping = aes(x=0.5+length(levels(as.factor(datos$probQuemarse)))/2, y=Inf, label = valor), size = 3, vjust = 1.5, colour = "gray50") +
   #geom_text(data = ann_texto,label="*", size = 15, colour="#CC6666") +
@@ -49,9 +49,18 @@ grafica <- ggplot(datos, aes(x=probQuemarse, y=totalAreaQuemada)) +
 ggsave("./imgs/img-calibracion.png",
   device = "png",
   grafica,
-  width = 40,
-  height = 15,
-  units = "cm"
+  width = 360,
+  height = 150,
+  units = "mm"
+  )
+
+ggsave("./imgs/img-calibracion.eps",
+  device = cairo_ps,
+  grafica,
+  width = 360,
+  height = 150,
+  units = "mm",
+  dpi = 300
   )
 
 ### SE GENERA Y EXPORTA TABLA CON MEJORES COMBINACIONES DE PARÁMETROS ###

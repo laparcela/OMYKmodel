@@ -74,9 +74,9 @@ graficarCalibracionUnaCombParam <- function(datos, probOcurInc, probQuemarse, pa
             legend = "left",
             ncol = 5,
             nrow = 1,
-            #labels = c("A","B","C","D","E"),
-            align = "h"#,
-            #font.label = list(size = 10)
+            labels = c("A","B","C","D","E"),
+            align = "h",
+            font.label = list(size = 8)
           )
 }
 
@@ -93,7 +93,8 @@ g <- graficarCalibracionUnaCombParam(datos, 0.093, 0.5, 0.025, 74, columnasParaG
 graficaAExportar <- g
 nombreGrafica <- "prueba-validacion"
 ggsave(paste("./imgs/",nombreGrafica,".png", sep = ""), device = "png", graficaAExportar,  width = 180, height = 60, units = "mm", dpi = 300)
-#ggsave(paste("./imgs/",nombreGrafica,".eps", sep = ""), device = cairo_ps, graficaAExportar,  width = 180, height = 60, units = "mm", dpi = 300)
+ggsave(paste("./imgs/",nombreGrafica,".jpg", sep = ""), device = "jpg", graficaAExportar,  width = 180, height = 60, units = "mm", dpi = 300)
+ggsave(paste("./imgs/",nombreGrafica,".eps", sep = ""), device = cairo_ps, graficaAExportar,  width = 180, height = 60, units = "mm", dpi = 300)
 
 ###########################################
 

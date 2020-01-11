@@ -50,13 +50,13 @@ levels(datosTotal$estrategia) <- c("Other", "Traditional", "Mixed", "Service Ori
 
 dat <- datosTotal[datosTotal$disturbio == "normal",]
 
-ylabSelva <- "Area of\nmature forest (ha)" #"Área de selva madura (ha)"
+ylabSelva <- "Mature forest area (ha)" #"Área de selva madura (ha)"
 ylabMonos <- "Number of monkeys" #"Número de monos"
 ylabValMo <- "Average monetary value\n(daily minimum wages)" #"Valor monetario promedio\n(salarios mínimos / día)"
 
 source("funcion-graficar-casos.R")
 
-tamano.letra <- 9
+tamano.letra <- 8.5
 
 # nombre_parametro <- "actividades"
 # leyenda_parametro <-"Actividades"
@@ -164,5 +164,92 @@ ggsave(
   gd,
   #width = 23, height = 27, units = "cm",
   width = 180, height = 130, units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  "./imgs/disturbios.jpg",
+  #"./imgs/disturbios.eps",
+  device = "jpg",
+  #device = cairo_ps,
+  gd,
+  #width = 23, height = 27, units = "cm",
+  width = 180, height = 130, units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  #"./imgs/disturbios.png",
+  "./imgs/disturbios.eps",
+  #device = "png",
+  device = cairo_ps,
+  gd,
+  #width = 23, height = 27, units = "cm",
+  width = 180, height = 130, units = "mm",
+  dpi = 300
+)
+
+######################################
+#### Graficar boxplot e histograma ###
+bxplt <- ggplot(dat, aes(x=estrategia,y=mediaAnoSustento,fill=estrategia)) +
+  geom_boxplot() +
+  facet_grid(~disturbio)+
+  labs(y="Average monetary value\n(daily minimum wages)", x = " ", color="Strategy",fill="Strategy") +
+  scale_color_manual(values = c("#999999","#F0E442","#0072B2","#D55E00"))+
+  scale_fill_manual(values = c("#999999","#F0E442","#0072B2","#D55E00")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank()) +
+  theme(text = element_text(size=tamano.letra), legend.key.height = unit(0.75,'line'),legend.key.width = unit(0.9,'line'))
+bxplt
+
+hist <- ggplot(dat, aes(x=mediaAnoSustento,fill=estrategia,color=estrategia)) +
+  geom_histogram(alpha=0.5, position="identity",bins = 50) +
+  #geom_density(alpha=0.2) +
+  facet_grid(~disturbio) +
+  labs(x="Average monetary value per bimester (daily minimum wages)", y = "Frequency", color="Strategy",fill="Strategy") +
+  scale_color_manual(values = c("#999999","#F0E442","#0072B2","#D55E00"))+
+  scale_fill_manual(values = c("#999999","#F0E442","#0072B2","#D55E00")) +
+  theme(text = element_text(size=tamano.letra), legend.key.height = unit(0.75,'line'),legend.key.width = unit(0.9,'line'))
+hist
+
+ggsave(
+  "./imgs/boxplot-valor-monetario.png",
+  device = "png",
+  bxplt,
+  width = 180, height = 50, units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  "./imgs/boxplot-valor-monetario.jpg",
+  device = "jpg",
+  bxplt,
+  width = 180, height = 50, units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  "./imgs/boxplot-valor-monetario.eps",
+  device = cairo_ps,
+  bxplt,
+  width = 180, height = 50, units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  "./imgs/hist-valor-monetario.png",
+  device = "png",
+  hist,
+  width = 180, height = 50, units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  "./imgs/hist-valor-monetario.eps",
+  device = cairo_ps,
+  hist,
+  width = 180, height = 50, units = "mm",
   dpi = 300
 )

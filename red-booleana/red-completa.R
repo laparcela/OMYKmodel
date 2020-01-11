@@ -24,5 +24,18 @@ ggsave(
   figura,
   width = 85,
   height = 70,
-  units = "mm"
+  units = "mm",
+  dpi = 300
+)
+
+ggsave(
+  #"./imgs/img-atractores-total.eps",
+  "./imgs/img-atractores-total.jpg",
+  #device = "eps",
+  device = "jpg",
+  figura,
+  width = 85,
+  height = 70,
+  units = "mm",
+  dpi = 300
 )
