@@ -1,4 +1,4 @@
-# modelo-OMYK
+# OMYKmodel
 
 Código del modelo y figuras del artículo:
 
