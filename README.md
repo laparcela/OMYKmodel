@@ -1,21 +1,21 @@
 # OMYKmodel
 
-Código del modelo y figuras del artículo:
+Code of the model and figures of the article:
 
-***Multiple resource use strategies confer resilience to the socio-ecosystem in a protected area in the Yucatan Peninsula, Mexico***
+***Multiple resource use strategies and resilience of the socio-ecosystem in a protected area in the Yucatan Peninsula, Mexico***
 
-Disponible en: ['https://www.biorxiv.org/content/10.1101/2020.01.08.897462v3'](https://www.biorxiv.org/content/10.1101/2020.01.08.897462v3)
+Available in: ['https://www.biorxiv.org/content/10.1101/2020.01.08.897462v3'](https://www.biorxiv.org/content/10.1101/2020.01.08.897462v3)
 
-**Contenido**
+**Contents**
 
-[`codigo/`](codigo/): código del modelo implementado en NetLogo 6.0.4
+[`model-code/`](model-code/): code of the model implemented in NetLogo 6.0.4
 
-[`red-booleana/`](red-booleana/): análisis y figuras de la red booleana
+[`boolean-network/`](boolean-network/): analysis and figures of the boolean network
 
-[`resultados/`](resultados/): resultados de los experimentos, código de la visualización de datos y figuras (debido al tamaño de los archivos los resultados del análisis de sensibilidad y de los escenarios no se incluye)
+[`results/`](results/): datasets and figures of the calibarion, scenario analysis, sensitivity analysis and validation (due to the size of the files the results of the sensitibity analysis and of the scenario simulations are not included. These files can be obtained on personal request) 
 
-[`figuras-adicionales/`](figuras-adicionales/): código y datos de figuras adicionales
+[`extra-figures/`](extra-figures/): code and data of extra figures
 
-**Licencia**
+**Licence**
 
-Código bajo licencia [MIT](https://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
