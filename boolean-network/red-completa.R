@@ -10,10 +10,6 @@ source('funcion-imagen-atractor.R')
 attr <- getAttractors(redOMYK)
 attr.toda.1 <- getAttractorSequence(attr, 2)
 
-names(attr.toda.1)[names(attr.toda.1) == "presion"] <- "presión"
-names(attr.toda.1)[names(attr.toda.1) == "precipitacion"] <- "precipitación"
-names(attr.toda.1)[names(attr.toda.1) == "produccionCarbon"] <- "producciónCarbón"
-
 figura <- imagenAtractor(attr.toda.1, 0, 9)
 
 ggsave(
@@ -23,7 +19,7 @@ ggsave(
   device = "png",
   figura,
   width = 85,
-  height = 70,
+  height = 90,
   units = "mm",
   dpi = 300
 )
@@ -35,7 +31,7 @@ ggsave(
   device = "jpg",
   figura,
   width = 85,
-  height = 70,
+  height = 90,
   units = "mm",
   dpi = 300
 )

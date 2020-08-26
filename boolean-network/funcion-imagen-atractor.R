@@ -29,6 +29,13 @@ imagenAtractor <- function(atractor, pasos.a.mover = 0, tamano.texto){
     theme_bw() +
     #guides(col = guide_legend(title.position = "left", nrow = 1,title.vjust = 1), fill = guide_legend(title.position = "left",nrow = 1,title.vjust = 1)) +
     #theme(legend.position ="bottom") +
-    theme(text = element_text(size=tamano.texto))
+    geom_text(x=1,y=13.3,label="Jan-Feb",colour="gray",angle=90,size=2)+
+    geom_text(x=2,y=13.3,label="Mar-Apr",colour="gray",angle=90,size=2)+
+    geom_text(x=3,y=13.3,label="May-Jun",colour="gray",angle=90,size=2)+
+    geom_text(x=4,y=13.3,label="Jul-Aug",colour="gray",angle=90,size=2)+
+    geom_text(x=5,y=13.3,label="Sep-Oct",colour="gray",angle=90,size=2)+
+    geom_text(x=6,y=13.3,label="Nov-Dec",colour="gray",angle=90,size=2)+
+    theme(text = element_text(size=tamano.texto),plot.margin = unit(c(1.8,0,0,0), "lines")) + 
+    coord_cartesian(clip = "off")
     #theme(axis.text.y = element_text(size = 10))
 }
