@@ -13,10 +13,10 @@ attr.toda.1 <- getAttractorSequence(attr, 2)
 figura <- imagenAtractor(attr.toda.1, 0, 9)
 
 ggsave(
-  #"./imgs/img-atractores-total.eps",
-  "./imgs/img-atractores-total.png",
-  #device = "eps",
-  device = "png",
+  "./imgs/img-atractores-total.eps",
+  #"./imgs/img-atractores-total.png",
+  device = "eps",
+  #device = "png",
   figura,
   width = 85,
   height = 90,
