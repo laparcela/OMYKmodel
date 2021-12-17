@@ -1,17 +1,5 @@
 parametro_n,separar_por_n,media,sd.promedio,cv.promedio
-1,Other,normal,499.88,112.67,17.7
-2,Other,increase storms,422.08,137.83,24.94
-3,Other,increase forest fires,279.38,82.49,24.5
-4,Other,decrease tourism,519.36,106.17,15.91
-5,Traditional,normal,454.52,102.06,16.9
-6,Traditional,increase storms,340.38,123.48,27.84
-7,Traditional,increase forest fires,241.13,78.6,26.17
-8,Traditional,decrease tourism,445.29,95.89,16.96
-9,Mixed,normal,436.39,115.19,20.92
-10,Mixed,increase storms,382.75,128.97,25.76
-11,Mixed,increase forest fires,233.97,76.72,26.8
-12,Mixed,decrease tourism,429.09,109.6,19.26
-13,Service Oriented,normal,501.47,117.9,18.02
-14,Service Oriented,increase storms,423.09,134.49,24.78
-15,Service Oriented,increase forest fires,279.02,96.14,27.78
-16,Service Oriented,decrease tourism,512.8,117.97,18.28
+1,NA,normal,482.56,112.39,18.14
+2,NA,increase storms,382.06,135.86,27.45
+3,NA,increase forest fires,251.6,85.79,27.8
+4,NA,decrease tourism,486.38,114.45,17.85

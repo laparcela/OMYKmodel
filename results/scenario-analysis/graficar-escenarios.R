@@ -19,6 +19,11 @@ datosDisminuirTurismo$disturbio <-  "decrease tourism" #"disminución de turismo
 
 datosTotal <- rbind(datosNormal, datosAumentarTormetas, datosAumentarIncendios,datosDisminuirTurismo)
 
+datosTotal$milpaT. <- as.factor(datosTotal$milpaT.)
+datosTotal$apiculturaT. <- as.factor(datosTotal$apiculturaT.)
+datosTotal$carbonT. <- as.factor(datosTotal$carbonT.)
+datosTotal$turismoT. <- as.factor(datosTotal$turismoT.)
+
 levels(datosTotal$milpaT.) <- c("-", "M")
 levels(datosTotal$apiculturaT.) <- c("-", "A")
 levels(datosTotal$carbonT.) <- c("-", "C")
